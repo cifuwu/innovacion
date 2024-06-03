@@ -7,7 +7,7 @@ import { FaBars } from "react-icons/fa6";
 
 
 export default function SideBar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () => setIsOpen(false);
 
