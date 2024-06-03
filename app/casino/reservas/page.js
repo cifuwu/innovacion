@@ -18,15 +18,15 @@ export default function Page() {
         </div>
 
         <div className="mx-4 mt-10">
-          <div id="alert-additional-content-5" class="p-4 border flex justify-between items-center border-gray-300 rounded-lg bg-gray-50 dark:border-gray-600 dark:bg-gray-800" role="alert">
+          <div id="alert-additional-content-5" className="p-4 border flex justify-between items-center border-gray-300 rounded-lg bg-gray-50 dark:border-gray-600 dark:bg-gray-800" role="alert">
             <div>
-              <div class="flex items-center">
-                <h3 class="text-lg font-medium text-gray-800 dark:text-gray-300">Campus San joaquín</h3>
+              <div className="flex items-center">
+                <h3 className="text-lg font-medium text-gray-800 dark:text-gray-300">Campus San joaquín</h3>
               </div>
-              <div class="mt-0 mb-2 text-sm text-gray-800 dark:text-gray-300">
+              <div className="mt-0 mb-2 text-sm text-gray-800 dark:text-gray-300">
                 Almuerzo Vegetariano
               </div>
-              <div class="mt-0 mb-4 text-sm font-semibold text-gray-800 dark:text-gray-300">
+              <div className="mt-0 mb-4 text-sm font-semibold text-gray-800 dark:text-gray-300">
                 23/08/2024
               </div>
             </div>
