@@ -28,7 +28,7 @@ export default function SideBar() {
             <Link href={'/casino/reservar'} onClick={()=>{setIsOpen(false)}} className="font-medium">Casino USM</Link>
             <Link href={'/horario'} onClick={()=>{setIsOpen(false)}} className="font-medium">Horarios</Link>
             <Link href={'/gimnasio'} onClick={()=>{setIsOpen(false)}} className="font-medium">Gimnasio USM</Link>
-            <Link href={'/certificados'} onClick={()=>{setIsOpen(false)}} className="font-medium">Certificados</Link>
+            <Link href={'/certificados/solicitar'} onClick={()=>{setIsOpen(false)}} className="font-medium">Certificados</Link>
             <Link href={'/ajustes'} onClick={()=>{setIsOpen(false)}} className="font-medium">Ajustes</Link>
           </div>
         </Drawer.Items>
