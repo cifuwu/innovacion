@@ -1,39 +1,57 @@
 "use client";
 
-import { Drawer } from "flowbite-react";
-import Link from "next/link";
 import { useState } from "react";
-import { FaBars } from "react-icons/fa6";
-
+import Link from "next/link";
+import { FaBars } from "react-icons/fa";
+import { Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, DrawerCloseButton } from "@chakra-ui/react";
+import { Button } from "@/components/ui/button";
 
 export default function SideBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () => setIsOpen(false);
+  const handleOpen = () => setIsOpen(true);
 
-
-  return(
+  return (
     <>
       <div className="absolute top-3 left-3">
-        <button className="p-2" onClick={() => setIsOpen(true)}>
-          <FaBars className="text-3xl"/>
-        </button>
+        <Button variant="ghost" onClick={handleOpen}>
+          <FaBars className="text-3xl text-white" />
+        </Button>
       </div>
-      <Drawer open={isOpen} onClose={handleClose}>
-        <Drawer.Header title="USM" />
-        <Drawer.Items>
-          <div className=" flex flex-col gap-3 text-xl">
-            <Link href={'/'} onClick={()=>{setIsOpen(false)}} className="font-medium">Menú princial</Link>
-            <Link href={'/correo/inbox'} onClick={()=>{setIsOpen(false)}} className="font-medium">Correo USM</Link>
-            <Link href={'/casino/reservar'} onClick={()=>{setIsOpen(false)}} className="font-medium">Casino USM</Link>
-            <Link href={'/horario'} onClick={()=>{setIsOpen(false)}} className="font-medium">Horarios</Link>
-            <Link href={'/gimnasio'} onClick={()=>{setIsOpen(false)}} className="font-medium">Gimnasio USM</Link>
-            <Link href={'/certificados/solicitar'} onClick={()=>{setIsOpen(false)}} className="font-medium">Certificados</Link>
-            <Link href={'/ajustes'} onClick={()=>{setIsOpen(false)}} className="font-medium">Ajustes</Link>
-          </div>
-        </Drawer.Items>
+      <Drawer isOpen={isOpen} placement="left" onClose={handleClose}>
+        <DrawerOverlay>
+          <DrawerContent bg="gray.900" color="gray.200">
+            <DrawerCloseButton color="gray.200" />
+            <DrawerHeader>USM</DrawerHeader>
+            <DrawerBody>
+              <div className="flex flex-col gap-3 text-xl">
+                <Link href="/" onClick={handleClose} className="font-medium text-gray-200 hover:text-gray-400">
+                  Menú principal
+                </Link>
+                <Link href="/correo/inbox" onClick={handleClose} className="font-medium text-gray-200 hover:text-gray-400">
+                  Correo USM
+                </Link>
+                <Link href="/casino/reservar" onClick={handleClose} className="font-medium text-gray-200 hover:text-gray-400">
+                  Casino USM
+                </Link>
+                <Link href="/horario" onClick={handleClose} className="font-medium text-gray-200 hover:text-gray-400">
+                  Horarios
+                </Link>
+                <Link href="/gimnasio" onClick={handleClose} className="font-medium text-gray-200 hover:text-gray-400">
+                  Gimnasio USM
+                </Link>
+                <Link href="/certificados/solicitar" onClick={handleClose} className="font-medium text-gray-200 hover:text-gray-400">
+                  Certificados
+                </Link>
+                <Link href="/ajustes" onClick={handleClose} className="font-medium text-gray-200 hover:text-gray-400">
+                  Ajustes
+                </Link>
+              </div>
+            </DrawerBody>
+          </DrawerContent>
+        </DrawerOverlay>
       </Drawer>
     </>
-
-  )
+  );
 }
