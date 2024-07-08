@@ -1,0 +1,8 @@
+[
+    {
+        "nombre": "Certificado de alumno regular",
+        "documento": "/certificados/AlumnoRegular.pdf",
+        "estado":"Emitido",
+        "fecha":"07/08/2024"
+    }
+]
